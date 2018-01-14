@@ -1,0 +1,98 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+
+\renewcommand{\contentsname}{Table des matières}
+
+\fancyhead[L]{Knights of the \\Fallen Lemon}
+\fancyhead[C]{\textbf{Company \& Co.}}
+\fancyhead[R]{19 Janvier 2018}
+
+\begin{document}
+\begin{titlepage} 
+	\begin{center}
+	\line(1,0){300}\\
+	[2mm]
+	\huge{\bfseries Company \& Co. \\Cahier des charges}\\
+	[1mm]
+	\line(1,0){200}\\
+	[1.5 cm]
+	\textsc{\LARGE Knigths of the Fallen Lemon}\\
+	[0.75 cm]
+	\textsc{\Large HACQUARD Victor\\HANNACHI Maya\\LECOMTE Malo\\MASSELLES Léa}\\
+	[1 cm]
+	\textsc{\large 19 Janvier 2018}
+	\end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\addcontentsline{toc}{section}{Introduction}
+\section*{Introduction}
+Ce cahier des charges a été écrit dans le but de vous expliquer nos idées pour notre projet de fin d'année.
+
+Nous allons vous expliquer plus en détails nos idées. (A compléter)
+
+\section{Le projet de manière générale}
+\subsection{Origine du projet}
+Trouver une idée de projet peut être légèrement compliquée. Chaque membre avait plusieurs propositions, mais nous en avons retenues deux que nous avons fusionné. L'une a été trouvé par Victor au début du projet, consistant à créer un jeu se déroulant dans une entreprise avec des personnages très caricaturaux. L'autre provient de Malo, très inspiré par ses jeux vidéos, imaginant un gameplay se basant sur la gestion d'unités individuelles pour que, réunies ensembles et si bien maitrisées, elles deviennent plus puissantes et permettent de battre l'ennemi, concept qui nous verrons plus en détails dans la section suivante.
+
+\subsection{Le scénario}
+Nous avons imaginé que le jeu se déroulerait dans une entreprise, où nous incarnons un stagiaire en bas de l'échelle hiérarchique, désespéré par sa situation. Il déciderait de quitter son poste pour fonder sa propre entreprise et prendre sa vie en main. Il devra alors combattre les entreprises concurrentes tout en gérant la sienne et ses employés pour gagner des parts de marché et devenir la meilleure entreprise et éventuellement devoir affronter l'entreprise dans laquelle il travaillait pour prendre sa revanche.
+
+\subsection{Le but du jeu}
+Notre jeu n'est pas à prendre au premier degré. Le but est vraiment de faire un jeu humoristique rempli de blagues qui ferais rigoler uniquement des personnes de notre génération. Toutefois, ce n'est pas parce qu'on veut lui donner un aspect drôle qu'il ne donnera pas du fil à retordre aux joueurs. La difficulté augmentera bien au fur et à mesure, et nous espérons que notre humour détendra le joueur pour pas qu'il abandonne au milieu d'une partie.
+
+\subsection{Une expérience utile}
+Nous espérons que ce projet peut nous offrir un exemple concret de comment se déroule le travail en groupe, et peut être nous donner une idée de comment cela peut être en entreprise. En sept mois, nous avons le temps de mettre en place une méthodologie pour travailler efficacement tous ensemble, méthodologie que nous pourrons probablement utiliser dans le futur.
+
+De manière individuelle, nous pourrons améliorer nos capacités pour travailler et apprendre en autonomie. Si nous répartissons le travail de manière correcte, chacun pourra maitriser le langage C\# et Unity et réutiliser ses connaissances dans de futurs projets ou même dans un futur travail.
+
+\section{L'aspect technique}
+\subsection{Le gameplay}
+Comme évoqué précédemment, le gameplay de notre jeu se basera sur la gestion d'unités individuelles qui devront être combinées pour pouvoir battre les ennemis. En termes légèrement plus techniques, le jeu sera un \textit{tactical RPG}, abrégé \textit{T-RPG}, où le joueur devra gérer plusieurs types de personnages.
+
+\subsubsection{Les tacticals RPG}
+Les T-RPG sont des jeux de rôle tactiques. Le joueur doit gérer chaque personne un à un et prendre en compte ses forces et ses faiblesses, trouver des stratégies ingénieuses, comme exploiter les failles de ses ennemis, pour pouvoir combattre l'adversaire efficacement.\\
+
+Une des caractéristiques principales des T-RPG est que le joueur doit gérer un nombre d'unités important. Dans les jeux de rôle plus "classiques", le joueur doit souvent incarner une seule personne ou gérer une équipe comptant six membres au maximum, alors que ce nombre peut s'avérer beaucoup plus élevé dans le cas d'un T-RPG. De même pour le camp adverse, comptant un nombre d'unités ennemies similaire à celui du joueur.\\
+
+\textit{Company \& Co.} sera également un jeu de tour par tour, le joueur devra donner une action à chacune de ses unités pendant un tour.
+
+\subsubsection{Les personnages}
+Chaque personnage de T-RPG doit avoir des capacités spéciales exploitables, pouvant mener à différentes stratégies. Nous évoquerons plusieurs caractéristiques au sein de chaque classe, comme les points d'attaque, de défense ou de vie, composants les statistiques des personnages, en plus des capacités spéciales. Il sera possible d'évoluer au sein de ces classes et dans certains cas de changer de classe. Nous avons donc imaginé plusieurs types d'unités.\\
+
+Si l'on suit le scénario du jeu, la classe la plus simple serait celle du stagiaire. Il aura peu de points d'attaque, de défense et de vie, mais sa capacité spéciale consisterait à "rendre des faveurs aux autres employés", ce qui équivaut à augmenter leurs statistiques.\\
+
+Une autre classe encore plus en bas de l'échelle serait celle de technicien de surface, pour ne pas dire homme ou femme de ménage. Son attaque serait faible mais sa défense élevée, il ne faut jamais faire le malin avec un technicien de surface qui vient tout juste de laver son sol.\\
+
+En remontant l'échelle de la hiérarchie en entreprise, nous pouvons mettre en place la meilleur classe de toutes : celle d'ingénieur. Ses statistiques serait moyennes mais sa capacité spéciale pourrait être excellente. Il pourrait inventer de nouvelles "armes" ou en améliorer des déjà existantes, c'est-à-dire qu'il augmenterait de manière permanente les points d'attaque et/ou de défense. Nous pouvons le considérer comme le forgeron des T-RPG plus classiques.\\ 
+
+Encore au-dessus se trouve la classe de manager. Pour refléter la réalité, cette classe compterait très peu de points de défense mais beaucoup de points d'attaque et possèderait la capacité spéciale la plus forte : celle de pouvoir contrôler des unités. Après un combat contre un manager et une unité quelconque, si le manager gagne, il sera en possession de cette unité même si elle appartenait à l'ennemi. 
+
+\subsection{Le langage de programmation}
+Vous vous en doutez, pour créer un jeu vidéo, nous avons besoin de quoi coder. Comme proposé dans la partie \textbf{Restrictions} du \textbf{Dossier Projet Informatique}, nous utiliserons C\# accompagné de UNITY. 
+
+\subsection{Les graphismes}
+A ce stade du projet, nous n'avons pas encore tous les éléments qui nous permettront d'afficher notre jeu. En tant que T-RPG, les unités seront représentées par des modèles 2D ou 3D sur un décor en 3D, comme pour la majorité des T-RPG.
+
+\section{Nos inspirations}
+\subsection{Histoire}
+La partie histoire est très inspirée des mécanismes de jeux de gestion, en particulier par tous les jeux de types \textit{Tycoon}, comme \textit{Game Dev Tycoon}, la série des \textit{RollerCoaster Tycoon}, ou même \textit{Jurassic Park: Operation Genesis}. Tous ces jeux ont un même principe : créer une entreprise, la développer et la gérer pour qu'elle reste viable.
+\subsection{Gameplay}
+La plus grande inspiration pour le gameplay est la série des jeux \textit{Fire Emblem}. Tous sont très connus et la façon dont chaque personnage est mis en place, combiné avec les mécaniques de gameplay, comme les relations entre personnages augmentant leurs statistiques au combat, nous ont donné beaucoup d'idées.
+
+\section{Planning et développement}
+\subsection{Répartition des tâches}
+Je sais pas quoi mettre
+\subsection{Avancement du projet}
+Vous savez faire des tableaux?
+
+\section{Conclusion}
+A faire
+
+\end{document}
