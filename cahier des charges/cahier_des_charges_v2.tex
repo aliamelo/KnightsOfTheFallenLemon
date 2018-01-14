@@ -1,0 +1,165 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[french]{babel}
+
+\pagestyle{fancy}
+
+\renewcommand{\contentsname}{Table des matières}
+
+\fancyhead[L]{Knights of the \\Fallen Lemon}
+\fancyhead[C]{\textbf{Company \& Co.}}
+\fancyhead[R]{Janvier 2018}
+
+\begin{document}
+\begin{titlepage} 
+	\begin{center}
+	\line(1,0){300}\\
+	[2mm]
+	\huge{\bfseries Company \& Co. \\Cahier des charges}\\
+	[1mm]
+	\line(1,0){200}\\
+	[1.5 cm]
+	\textsc{\LARGE Knights of the Fallen Lemon}\\
+	[0.75 cm]
+	\textsc{\Large Victor HACQUARD\\Maya HANNACHI\\Malo LECOMTE\\Léa MASSELLES}\\
+	[1 cm]
+	\textsc{\large 19 Janvier 2018}
+	\end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\addcontentsline{toc}{section}{Introduction}
+\section*{Introduction}
+Créer un jeu de toutes pièces n'est pas une mince affaire. En créer un qui sera à la fois loufoque et appréciable, encore moins.
+De l'ambition, nous en avons. Du sérieux également, tout autant que notre humour omniprésent et décalé.
+
+Cet ouvrage a été écrit dans le but de vous présenter et de vous expliquer nos idées pour notre projet de première année, ainsi que l'avancement probable de nos travaux et de nos efforts.
+
+Notre groupe, Knights of the Fallen Lemon, vous présentera ici son projet de jeu, Company \& Co., qui sera le fruit de notre sueur et de nos larmes, fussent-elles de désespoir... ou de rire.
+\section{Membres du groupe}
+\vspace{0.3cm}\hspace{-0.7cm}
+\textbf{Victor HACQUARD}
+\begin{itemize}
+\item[•] \textbf{\textit{Classe}} : Entité supérieure
+\item[•] \textbf{\textit{Age}} : 19 ans
+\item[•] \textbf{\textit{Caractéristiques}} : Never say no to panda
+\item[•] \textbf{\textit{Compétences}} : 
+\item[•] \textbf{\textit{Capacité spéciale}} :
+\end{itemize}
+\vspace{0.3cm}
+\textbf{Maya HANNACHI}
+\begin{itemize}
+\item[•] \textbf{\textit{Classe}} : Distributeur de câlins
+\item[•] \textbf{\textit{Age}} : 18 ans
+\item[•] \textbf{\textit{Caractéristiques}} : Adepte du diabète liquide
+\item[•] \textbf{\textit{Compétences}} : 
+\item[•] \textbf{\textit{Capacité spéciale}} : Appel à un ami : Voltaire
+\end{itemize}
+\vspace{0.3cm}
+\textbf{Malo LECOMTE}
+\begin{itemize}
+\item[•] \textbf{\textit{Classe}} : Chevalier demi-dragon
+\item[•] \textbf{\textit{Age}} : 17 ans
+\item[•] \textbf{\textit{Caractéristiques}} : 
+\item[•] \textbf{\textit{Compétences}} : 
+\item[•] \textbf{\textit{Capacité spéciale}} :
+\end{itemize}
+\vspace{0.3cm}
+\textbf{Léa MASSELLES (Chef de projet)}
+\begin{itemize}
+\item[•] \textbf{\textit{Classe}} : Petite mère
+\item[•] \textbf{\textit{Age}} : 18 ans
+\item[•] \textbf{\textit{Caractéristiques}} : Beaucoup de colère dans un petit corps
+\item[•] \textbf{\textit{Compétences}} : 
+\item[•] \textbf{\textit{Capacité spéciale}} : Anti-procrastination
+\end{itemize}
+
+\section{Le projet de manière générale}
+\subsection{Origine du projet}
+Trouver une idée de projet peut être légèrement compliqué. Chaque membre avait plusieurs propositions, mais nous en avons retenu deux que nous avons fusionné. L'une a été trouvée par Victor au début du projet, consistant à créer un jeu se déroulant dans une entreprise avec des personnages très caricaturaux. L'autre provient de Malo, très inspiré par son amour pour les jeux vidéos, imaginant un gameplay se basant sur la gestion d'unités individuelles qui, réunies ensembles et si bien maitrisées, deviennent plus puissantes et permettent de vaincre l'ennemi, concept que nous verrons plus en détails dans la section suivante.
+
+\subsection{Le scénario}
+Nous avons imaginé que le jeu se déroulerait dans une entreprise, où nous incarnons un stagiaire en bas de l'échelle hiérarchique, désespéré par sa situation. Il déciderait de quitter son poste pour fonder sa propre affaire et prendre sa vie en main. Il devra alors combattre les entreprises concurrentes tout en gérant la sienne et ses employés pour gagner des parts de marché et devenir le meilleur, et éventuellement devoir affronter ses anciens collègues et supérieurs pour prendre sa revanche.
+
+\subsection{Le but du jeu}
+Notre jeu n'est pas à prendre au premier degré. Le but est vraiment de faire un jeu humoristique parsemé de blagues qui ne feraient rire que des personnes de notre génération. Toutefois, ce n'est pas parce qu'il présentera un aspect drôle qu'il ne donnera pas du fil à retordre aux joueurs. La difficulté augmentera bien au fur et à mesure, et nous espérons que notre humour détendra le joueur pour ne pas le voir abandonner au milieu d'une partie.
+
+\subsection{Une expérience utile}
+Nous espérons que ce projet peut nous offrir un exemple concret du déroulement du travail en groupe, et peut-être nous donner une idée de la vie en entreprise. En sept mois, nous avons le temps de mettre en place une méthodologie pour travailler efficacement en groupe, méthodologie que nous pourrons probablement utiliser dans un futur proche.
+
+De manière individuelle, nous pourrons améliorer nos capacités pour travailler et apprendre en autonomie. Si nous répartissons le travail de manière correcte, chacun pourra maitriser le langage C\# et Unity et réutiliser ses connaissances dans de futurs projets, voire dans notre vie active.
+
+\section{L'aspect technique}
+\subsection{Le gameplay}
+Comme évoqué précédemment, le gameplay de notre jeu se basera sur la gestion d'unités individuelles qui devront être combinées pour pouvoir vaincre les ennemis. En termes légèrement plus techniques, le jeu sera un \textit{tactical RPG}, abrégé \textit{T-RPG}, où le joueur devra gérer plusieurs types de personnages.
+
+\subsubsection{Les tacticals RPG}
+Les T-RPG sont des jeux de rôle tactiques. Le joueur doit gérer chaque personnage un à un et prendre en compte ses forces et ses faiblesses, trouver des stratégies ingénieuses, comme exploiter les failles de ses ennemis, pour pouvoir combattre l'adversaire efficacement.\\
+
+Une des caractéristiques principales des T-RPG est que le joueur doit gérer un nombre d'unités important. Dans les jeux de rôle plus "classiques", le joueur doit souvent incarner une seule personne ou gérer une équipe comptant six membres au maximum, alors que ce nombre peut s'avérer beaucoup plus élevé dans le cas d'un T-RPG. De même pour le camp adverse, comptant un nombre d'unités ennemies équivalent à celui du joueur.\\
+
+\textit{Company \& Co.} sera également un jeu de tour par tour, le joueur devra donner une action à chacune de ses unités pendant un tour.
+
+\subsubsection{Les personnages}
+Chaque personnage de T-RPG doit avoir des capacités spéciales exploitables, pouvant mener à différentes stratégies. Nous évoquerons plusieurs caractéristiques au sein de chaque classe, comme les points d'attaque, de défense ou de vie, composants les statistiques des personnages, en plus des capacités spéciales. Il sera possible d'évoluer au sein de ces classes et dans certains cas de changer de classe. Nous avons donc imaginé plusieurs types d'unités.\\
+
+Si l'on suit le scénario du jeu, la classe la plus basique serait celle du stagiaire. Il aura peu de points d'attaque, de défense et de vie, mais sa capacité spéciale consisterait à "rendre des faveurs aux autres employés", ce qui équivaut à augmenter leurs statistiques.\\
+
+Une autre classe en bas de l'échelle serait celle de technicien de surface, pour ne pas dire homme ou femme de ménage. Son attaque serait faible mais sa défense élevée. Il ne faut jamais faire le malin avec un technicien de surface qui vient tout juste de laver son sol.\\
+
+En remontant l'échelle de la hiérarchie en entreprise, nous pouvons mettre en place la meilleure de toutes les classes : celle d'ingénieur. Ses statistiques seraient moyennes mais sa capacité spéciale pourrait être excellente. Il pourrait inventer améliorer des armes déjà existantes ou en créer de nouvelles, c'est-à-dire qu'il augmenterait de manière permanente les points d'attaque et/ou de défense. Nous pouvons le considérer comme le forgeron des T-RPG plus classiques.\\ 
+
+Encore au-dessus se trouve la classe de manager. Pour refléter la réalité, cette classe compterait très peu de points de défense mais beaucoup de points d'attaque et posséderait la capacité spéciale la plus forte : celle de pouvoir contrôler des unités. Après un combat contre un manager et une unité quelconque, si le manager gagne, il prendra le contrôle de cette unité, même si elle appartenait à l'ennemi. 
+
+\subsection{Le langage de programmation}
+Vous vous en doutez, pour créer un jeu vidéo, nous avons besoin de quoi coder. Comme proposé dans la partie \textbf{Restrictions} du \textbf{Dossier Projet Informatique}, nous utiliserons C\# accompagné de UNITY. 
+
+\subsection{Les graphismes}
+A ce stade du projet, nous n'avons pas encore tous les éléments qui nous permettront d'afficher notre jeu. En tant que T-RPG, les unités seront représentées par des modèles 2D ou 3D sur un décor en 3D, comme pour la majorité des T-RPG.
+
+\section{Nos inspirations}
+\subsection{Histoire}
+La partie histoire est très inspirée des mécanismes de jeux de gestion, en particulier par tous les jeux de types \textit{Tycoon}, comme \textit{Game Dev Tycoon}, la série des \textit{RollerCoaster Tycoon}, ou même \textit{Jurassic Park: Operation Genesis}. Tous ces jeux ont un même principe : créer une entreprise, la développer et la gérer pour qu'elle reste viable.
+\subsection{Gameplay}
+La plus grande inspiration pour le gameplay est la série des jeux \textit{Fire Emblem}. Tous sont très connus et la façon dont chaque personnage est mis en place, combiné avec les mécaniques de gameplay, comme les relations entre personnages augmentant leurs statistiques au combat, nous ont donné beaucoup d'idées.
+
+\section{Planning et développement}
+\subsection{Répartition des tâches}
+\begin{center}
+	\begin{tabular}{|c||c|c|c|c|}
+	\hline
+    \textbf{Tâches} & \textbf{Victor} & \textbf{Maya} & \textbf{Malo} & \textbf{Léa} \\ \hline
+    1 & & & & \\ \hline
+    2 &  &  &  & \\ \hline
+    3 &  & &  & \\ \hline
+    4 & & & & \\ \hline
+    5 & & & &\\ \hline
+    6 &  & & &\\ \hline
+    7 &  &  & &\\ 
+    \hline
+	\end{tabular}
+\end{center}
+\subsection{Avancement du projet}
+\begin{center}
+   \begin{tabular}{ | c || c | c | c | }
+     \hline
+ 	 \textbf{Soutenance} & \textbf{1} & \textbf{2} & \textbf{3}    \\ \hline
+     Graphismes & \% & \% & 100\% \\ \hline
+     IA & \% & \%  & 100\% \\ \hline
+     Multijoueur & \% & \% & 100\% \\ \hline
+     Développement Web & \% & \% & 100\% \\ \hline
+     Rapport de projet & \% & \% & 100\% \\
+     \hline
+   \end{tabular}
+ \end{center}
+
+A titre indicatif, possibilité d'ajouter des sections/de diviser une section en plus petites tâches, etc.
+
+\section{Conclusion}
+A faire
+
+\end{document}
