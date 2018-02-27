@@ -15,18 +15,7 @@ public class Tech : Character
         }
         base.life = stats[0];
     }
-    protected int Life()
-    { get: return stats[0]; }
-    protected int Atk()
-    { get: return stats[1]; }
-    protected int Def()
-    { get: return stats[2]; }
-    protected int Matk()
-    { get: return stats[3]; }
-    protected int Mdef()
-    { get: return stats[4]; }
-    protected int Spd()
-    { get: return stats[5]; }
+
 
     // Use this for initialization
     void Start()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Taser : Items {
     protected int Cooldown;
 
-    Coffee(string name, int lvl, int Cooldown = 5) : base(ItemType.SUPPORT, name, lvl)
+    Taser(string name, int lvl, int Cooldown = 5) : base(ItemType.SUPPORT, name, lvl)
     {
         this.Cooldown = Cooldown;
     }

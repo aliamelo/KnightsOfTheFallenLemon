@@ -19,7 +19,7 @@ public class Stagiaire : Character{
         }
         base.life = stats[0];
     }
-    protected int Life()
+   /* protected int Life()
     { get: return stats[0]; }
     protected int Atk()
     { get : return stats[1]; }
@@ -30,7 +30,7 @@ public class Stagiaire : Character{
     protected int Mdef()
     { get: return stats[4]; }
     protected int Spd()
-    { get: return stats[5]; }
+    { get: return stats[5]; }*/
 
     // Use this for initialization
     void Start () {
