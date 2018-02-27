@@ -31,7 +31,7 @@ public class PDG : Character
     protected int Mdef()
     { get: return stats[4]; }
     protected int Spd()
-    { get: return stats[5]; }/*
+    { get: return stats[5]; }*/
 
     // Use this for initialization
     void Start () {
