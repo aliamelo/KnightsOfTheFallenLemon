@@ -11,7 +11,7 @@ public class Inge : Character
         //this.name = name;
         for (int i = 0; i < 6; i++)
         {
-            stats[i] += Random.Range(-2, 2);
+            istats[i] += Random.Range(-2, 2);
         }
         base.life = istats[0];
     }

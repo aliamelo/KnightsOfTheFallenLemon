@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Compt : Character
 {
-    new int[] stats = { 20, 20, 35, 20, 35, 10 };
+    new int[] istats = { 20, 20, 35, 20, 35, 10 };
     
     public Compt(string name, int lvl = 0) : base(Character.Characterclass.COUNT, name, lvl)
     {
         this.name = name;
         for (int i = 0; i < 6; i++)
         {
-            stats[i] += Random.Range(-2, 2);
+            istats[i] += Random.Range(-2, 2);
         }
-        base.stats = stats;
+        base.life = istats[0];
     }
    /* protected int Life()
     { get: return stats[0]; }

@@ -20,8 +20,14 @@ public class Character : MonoBehaviour{
     public string cname;
     public int life;
     private int maxLife;
-    public Items[] inventory = new Items[4];
-    public int[] stats = new int[6]; 
+    public Items[] inventory;
+    private int[] stats = { 10, 10, 10, 10, 10, 10 };
+    public int atk;
+    public int def;
+    public int matk;
+    public int mdef;
+    public int spd;
+    public int salary;
     public Character(Characterclass c, string name, int lvl = 0)
     {
         life = Life;
@@ -120,7 +126,58 @@ public Characterclass Class
     // Use this for initialization
     void Start () {
         //GameObject chara = new GameObject(name);
-	}
+        switch (c)
+        {
+            case Character.Characterclass.COUNT:
+                stats = new int[] { 20, 20, 35, 20, 35, 10 };
+                break;
+            case Character.Characterclass.GUARD:
+                stats = new int[] { 45, 15, 45, 0, 15, 10 };
+                break;
+            case Character.Characterclass.ING:
+                stats = new int[] { 25, 15, 5, 40, 35, 35 };
+                break;
+            case Character.Characterclass.INTER:
+                stats = new int[] { 15, 15, 15, 15, 15, 15 };
+                break;
+            case Character.Characterclass.MAN:
+                stats = new int[] { 10, 35, 10, 35, 10, 20 };
+                break;
+            case Character.Characterclass.PDG:
+                stats = new int[] { 10, 5, 10, 5, 10, 10 };
+                break;
+            case Character.Characterclass.SEC:
+                stats = new int[] { 10, 10, 10, 10, 10, 40 };
+                inventory = new Items[4];
+                Stapler s = new Stapler("stapler of doom", 0, 5);
+                inventory[0] = s;
+                break;
+            case Character.Characterclass.STAG:
+                stats = new int[] { 20, 20, 20, 20, 20, 20 };
+                break;
+            case Character.Characterclass.TECH:
+                stats = new int[] { 15, 45, 5, 0, 20, 45 };
+                break;
+            default:
+                stats = new int[] { 25, 25, 25, 25, 25, 25 };
+                break;
+
+        }
+        for (int i = 0; i < 6; i++)
+        {
+            stats[i] += Random.Range(-2, 2);
+        }
+        life = Life;
+        maxLife = life;
+        this.lvl = 1;
+        atk = Atk;
+        def = Def;
+        matk = Matk;
+        mdef = Mdef;
+        spd = Spd;
+
+        //this.cname = name;
+    }
 	
 	// Update is called once per frame
 	void Update () {

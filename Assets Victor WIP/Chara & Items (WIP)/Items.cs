@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Items : MonoBehaviour {
+public class Items {
 
     public enum ItemType
     {

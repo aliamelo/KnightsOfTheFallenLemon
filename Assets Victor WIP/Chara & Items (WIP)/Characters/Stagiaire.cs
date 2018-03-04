@@ -17,7 +17,7 @@ public class Stagiaire : Character{
         {
             istats[i] += Random.Range(-2, 2);
         }
-        base.life = stats[0];
+        base.life = istats[0];
     }
    /* protected int Life()
     { get: return stats[0]; }
