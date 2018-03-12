@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Company &amp; Co.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-diamond"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Company &amp; Co</h1>
+								<p>Bien le bonjour en cet étrange endroit !<br />
+      Nous sommes les <em> Knights of The Fallen Lemon</em>, à votre service.<br />
+Bienvenue dans notre domaine, où  vous trouverez ce qu'il vous faudra pour vous sustenter, élargir vos horizons et, nous l'espérons, vous amuser.<br />
+      Nous espérons que vous apprécierez votre séjour !<br /></p>
+
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Qui ?</a></li>
+								<li><a href="#work">Quoi ?</a></li>
+								<li><a href="#about">Le jeu</a></li>
+								<li><a href="#contact">Contact</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Qui sommes-nous ?</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p>Bonne question..<br />
+								  Nous sommes quatre. Nous ne formons qu’un groupe, doté d’une seule âme.<br />
+
+								<p>Il y a une Petite mère, qui est un peu comme notre PDG à nous. Elle qui sait si bien s’occuper de nous, et si bien nous punir lorsqu’elle est en colère… Ne la mettez jamais en colère. Jamais. Vraiment. Il en va de votre survie. De notre survie à tous, en réalité.</p>
+
+								Notre premier membre, mais pas le dernier. Trois autres sont en approche.
+
+								<p>L’Entité Supérieure. Un être indéterminé, aux capacités insoupçonnées. (Si vous saviez la quantité de caféine qu’il a dans l’organisme…) Ce pourquoi il est là, d’ailleurs. Le café. Apparemment, celui du stagiaire était vraiment à son goût. Vous devriez essayer, vous aussi.</p>
+
+								Cela fait déjà deux membres, mais deux membres ne font pas un groupe. Tout au plus un duo.
+
+								<p>C’est pourquoi vient ensuite le Mage demi-dragon. Notre benjamin. Le plus mignon, le plus adorable, et le plus violent dans ses paroles. Méfiez-vous, il est bien plus dangereux qu’il n’en a l’air.</p>
+
+								Il manque quelqu’un. Et un peu d’affection devant tant de puissance aussi, vous ne trouvez pas ?
+
+								<p>Le Distributeur de Câlins est là pour vous en offrir. Une créature adepte du contact humain, et totalement inoffensive. Vraiment. Elle vous amusera… ou vous tapera sur le système.</p>
+
+								<p>Nous sommes quatre. Léa Masselles, Victor Hacquard, Malo Lecomte et Maya Hannachi.</p>
+
+								<p>Nous sommes un.</p>
+
+								<p>The Knights of The Fallen Lemon. </p>
+
+								A votre service.</p>
+								
+							</article>
+
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Que faisons-nous ?</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
+								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+							</article>
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">Le jeu</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<p>Notre jeu vous donne l’eau à la bouche ? Vous souhaiteriez découvrir les innombrables possibilités qu’il peut vous procurer ? Vous aimeriez vivre de longues minutes de divertissement et de plaisir ?</p>
+
+								<p>Vous êtes au bon endroit. Nous, Knights of The Fallen Lemon, vous offrons ici-même la toute dernière version de notre jeu, à portée de clic.</p>
+
+								<p>Et n’oubliez pas : nous évoluons pour vous procurer la meilleure expérience de jeu possible, à travers nos mises à jour.</p>
+
+								<p>Qu’attendez-vous ?</p>
+								<p><a href="cahier-des-charges.pdf">Téléchargez dès à présent notre cahier des charges !</a></p>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="#">
+									<div class="field half first">
+										<label for="name">Nom</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+							</article>
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									
+								</section>
+
+							
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: Pas nous.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
