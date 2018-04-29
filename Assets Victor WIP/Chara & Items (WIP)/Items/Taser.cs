@@ -5,7 +5,7 @@ using UnityEngine;
 public class Taser : Items {
     protected int Cooldown;
 
-    Taser(string name, int lvl, int Cooldown = 5) : base(ItemType.SUPPORT, name, lvl)
+    Taser(string name, int lvl = 0, int Cooldown = 5) : base(ItemType.SUPPORT, name, lvl)
     {
         this.Cooldown = Cooldown;
     }
@@ -19,13 +19,4 @@ public class Taser : Items {
     {
         target.ApplyEffect('s', 1);
     }
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

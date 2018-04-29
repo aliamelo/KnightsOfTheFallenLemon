@@ -6,7 +6,7 @@ public class Donut : Items {
 
     int boost;
     int dam;
-    Donut(string name, int lvl, int boost, int dam): base (ItemType.SUPPORT, name, lvl)
+    Donut(string name, int lvl = 0, int boost = 10, int dam = 5): base (ItemType.SUPPORT, name, lvl)
     {
         this.boost = boost;
         this.dam = dam;
@@ -25,14 +25,4 @@ public class Donut : Items {
         if (target.Class != Character.Characterclass.GUARD)
             target.takeDmg(dam);
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

@@ -6,7 +6,7 @@ public class Money : Items
 {
 
     int dmg;
-    Money(string name, int lvl, int dmg): base (ItemType.WEAPON, name, lvl)
+    Money(string name, int lvl = 0, int dmg = 10): base (ItemType.WEAPON, name, lvl)
     {
         this.dmg = dmg;
     }
@@ -21,13 +21,4 @@ public class Money : Items
         throw new System.Exception("Special capacities not implemented yet");
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

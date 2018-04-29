@@ -7,7 +7,7 @@ public class Broom : Items
 
     int dmg;
     int durability;
-    Broom(string name, int lvl, int dmg, int durability = 2): base (ItemType.WEAPON, name, lvl)
+    Broom(string name, int lvl = 0, int dmg = 5, int durability = 2): base (ItemType.WEAPON, name, lvl)
     {
         this.dmg = dmg;
         this.durability = durability;
@@ -23,14 +23,4 @@ public class Broom : Items
     {
         throw new System.Exception("Special capacities not implemented yet");
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

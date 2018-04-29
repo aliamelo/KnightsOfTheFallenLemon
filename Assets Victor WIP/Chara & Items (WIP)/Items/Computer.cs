@@ -6,7 +6,7 @@ public class Computer : Items
 {
 
     int dmg;
-    Computer(string name, int lvl, int dmg): base (ItemType.WEAPON, name, lvl)
+    Computer(string name, int lvl = 0, int dmg = 5): base (ItemType.WEAPON, name, lvl)
     {
         this.dmg = dmg;
     }
@@ -20,14 +20,4 @@ public class Computer : Items
     {
         throw new System.Exception("Special capacities not implemented yet");
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

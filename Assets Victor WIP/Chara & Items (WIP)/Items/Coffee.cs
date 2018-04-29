@@ -6,7 +6,7 @@ public class Coffee : Items {
 
     protected int healing;
     protected int nbUse;
-    Coffee(string name,int lvl,int basePow) : base(ItemType.SUPPORT, name, lvl)
+    Coffee(string name,int lvl = 0,int basePow = 10) : base(ItemType.SUPPORT, name, lvl)
     {
         healing = basePow;
         nbUse = lvl + 2;
