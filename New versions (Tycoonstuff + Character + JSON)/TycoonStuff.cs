@@ -772,20 +772,21 @@ public class TycoonStuff : MonoBehaviour
                 }
             }
         }
-        GUILayout.Box("Your current Team (click to de-select");
-        for (int j = 0; j < t; j++)
+
+        int j = 0;
+        while (j < t)
         {
-            if (j < t)
+            Character c = fightTeam[j];
+            string BoxContent = "" + c.cname + "\n";
+            BoxContent += "Lvl : " + (c.lvl + 1) + "\n";
+            if (GUILayout.Button(BoxContent))
             {
-                Character c = fightTeam[j];
-                string BoxContent = "" + c.cname + "\n";
-                BoxContent += "Lvl : " + (c.lvl + 1) + "\n";
-                if (GUILayout.Button(BoxContent))
-                {
-                    fightTeam.Remove(c);
-                    Team.Add(c);
-                }
+                fightTeam.Remove(c);
+                t--;
+                Team.Add(c);
             }
+            j++;
+
         }
         if (l > 3)
         {
