@@ -11,6 +11,8 @@ public class TycoonStuff : MonoBehaviour
     public Camera InterOffice;
     public Camera EndOffice;
 
+    public GUISkin customSkin;
+
     public int[] baseCapacity = { 2, 10, 20, 30 };
     public int[] upgradeCost = { 25000, 2500000};
     public int nbEmployee = 1;
@@ -339,7 +341,7 @@ public class TycoonStuff : MonoBehaviour
     void Load(int windowID)
     {
         trash = GUILayout.TextField(trash);
-        string path = ".\\Assets\\Scripts\\Sauvegarde\\" + trash;
+        string path = ".\\" + trash;
         if (GUILayout.Button("Load Team") && trash != "")
         {
             if(File.Exists(path))
@@ -846,7 +848,8 @@ public class TycoonStuff : MonoBehaviour
 
     void OnGUI()
     {
-       // GUI.backgroundColor = Color.white;
+        // GUI.backgroundColor = Color.white;
+        GUI.skin = customSkin;
         Rect window = new Rect(new Vector2(Screen.width / 2 - 250, Screen.height / 2 - 250), new Vector2(500, 100));
         if (!startscreen)
         {                  
@@ -950,8 +953,9 @@ public class TycoonStuff : MonoBehaviour
         JSONElement State = new JSONElement(JSONElement.JSONType.DIC);
         State.Add("Base Level", new JSONElement(baseLevel));
         State.Add("Money", new JSONElement(money));
-        string path = ".\\Assets\\Scripts\\Sauvegarde\\" + Team[0].cname;
+        string path = ".\\" + Team[0].cname;
         File.Delete(path);
+        File.WriteAllText("./SavePath", path);
         JSONElement TeamSpecs = new JSONElement(JSONElement.JSONType.DIC);
         foreach (Character c in Team)
         {
@@ -967,6 +971,7 @@ public class TycoonStuff : MonoBehaviour
             CharaSpecs.Add("matk", new JSONElement(c.matk));
             CharaSpecs.Add("mdef", new JSONElement(c.mdef));
             CharaSpecs.Add("spd", new JSONElement(c.spd));
+            CharaSpecs.Add("hero", new JSONElement(1));
             JSONElement Inventory = new JSONElement(JSONElement.JSONType.DIC);
             if (c.inventory.Count > 0)
             {
