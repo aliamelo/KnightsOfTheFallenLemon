@@ -12,6 +12,7 @@ public class TycoonStuff : MonoBehaviour
     public Camera EndOffice;
 
     public GUISkin customSkin;
+    public GUISkin closeSkin;
 
     public int[] baseCapacity = { 2, 10, 20, 30 };
     public int[] upgradeCost = { 25000, 2500000 };
@@ -151,8 +152,10 @@ public class TycoonStuff : MonoBehaviour
             }
             else doWindow10 = true;
         }
+        GUI.skin = closeSkin;
         if (GUILayout.Button("Close"))
             doWindow0 = false;
+        GUI.skin = customSkin;
     }
 
     void ChoicesDisplay(int WindowID)
@@ -195,11 +198,13 @@ public class TycoonStuff : MonoBehaviour
             page = GUILayout.HorizontalSlider(page, 0, (l / 3) - 1 >= 1 ? (l / 3) - 1 : 1);
             GUILayout.Box("Slide to change page");
         }
+        GUI.skin = closeSkin;
         if (GUILayout.Button("Close"))
         {
             page = 0;
             doWindow2 = false;
         }
+        GUI.skin = customSkin;
     }
 
     void Fire(int windowID)
@@ -213,11 +218,13 @@ public class TycoonStuff : MonoBehaviour
             }
 
         }
+        GUI.skin = closeSkin;
         if (GUILayout.Button("Close"))
         {
             idk = null;
             doWindow1 = false;
         }
+        GUI.skin = customSkin;
     }
 
     void StartScreen(int windowID)
@@ -437,11 +444,13 @@ public class TycoonStuff : MonoBehaviour
                 doWindow6 = false;
             }
         }
+        GUI.skin = closeSkin;
         if (GUILayout.Button("Close"))
         {
             idk = null;
             doWindow6 = false;
         }
+        GUI.skin = customSkin;
 
     }
 
@@ -456,11 +465,13 @@ public class TycoonStuff : MonoBehaviour
                 doWindow7 = false;
             }
         }
+        GUI.skin = closeSkin;
         if (GUILayout.Button("Close"))
         {
             idk = null;
             doWindow7 = false;
         }
+        GUI.skin = customSkin;
     }
 
     void CharaChoice(int windowID)
@@ -471,8 +482,10 @@ public class TycoonStuff : MonoBehaviour
                 if (!containsTech && !containsStag)
                 {
                     GUILayout.Box("You don't have the required class to equip this item");
+                    GUI.skin = closeSkin;
                     if (GUILayout.Button("Close"))
                         doWindow8 = false;
+                    GUI.skin = customSkin;
                 }
                 else
                 {
@@ -495,8 +508,10 @@ public class TycoonStuff : MonoBehaviour
                 if (!containsCount && !containsStag)
                 {
                     GUILayout.Box("You don't have the required class to equip this item");
+                    GUI.skin = closeSkin;
                     if (GUILayout.Button("Close"))
                         doWindow8 = false;
+                    GUI.skin = customSkin;
                 }
                 else
                 {
@@ -515,8 +530,10 @@ public class TycoonStuff : MonoBehaviour
                 if (!containsSec && !containsStag)
                 {
                     GUILayout.Box("You don't have the required class to equip this item");
+                    GUI.skin = closeSkin;
                     if (GUILayout.Button("Close"))
                         doWindow8 = false;
+                    GUI.skin = customSkin;
                 }
                 else
                 {
@@ -535,8 +552,10 @@ public class TycoonStuff : MonoBehaviour
                 if (!containsIng && !containsStag)
                 {
                     GUILayout.Box("You don't have the required class to equip this item");
+                    GUI.skin = closeSkin;
                     if (GUILayout.Button("Close"))
                         doWindow8 = false;
+                    GUI.skin = customSkin;
                 }
                 else
                 {
@@ -577,8 +596,10 @@ public class TycoonStuff : MonoBehaviour
                 if (!containsSec && !containsStag)
                 {
                     GUILayout.Box("You don't have the required class to equip this item");
+                    GUI.skin = closeSkin;
                     if (GUILayout.Button("Close"))
                         doWindow8 = false;
+                    GUI.skin = customSkin;
                 }
                 else
                 {
@@ -597,8 +618,10 @@ public class TycoonStuff : MonoBehaviour
                 if (!containsGuard && !containsStag)
                 {
                     GUILayout.Box("You don't have the required class to equip this item");
+                    GUI.skin = closeSkin;
                     if (GUILayout.Button("Close"))
                         doWindow8 = false;
+                    GUI.skin = customSkin;
                 }
                 else
                 {
@@ -617,8 +640,10 @@ public class TycoonStuff : MonoBehaviour
                 if (!containsGuard && !containsStag)
                 {
                     GUILayout.Box("You don't have the required class to equip this item");
+                    GUI.skin = closeSkin;
                     if (GUILayout.Button("Close"))
                         doWindow8 = false;
+                    GUI.skin = customSkin;
                 }
                 else
                 {
@@ -635,8 +660,10 @@ public class TycoonStuff : MonoBehaviour
                 break;
             default:
                 GUILayout.Box("You don't have the required class to equip this item");
+                GUI.skin = closeSkin;
                 if (GUILayout.Button("Close"))
                     doWindow8 = false;
+                GUI.skin = customSkin;
                 break;
 
         }
@@ -660,8 +687,10 @@ public class TycoonStuff : MonoBehaviour
                 doWindow9 = false;
             }
         }
+        GUI.skin = closeSkin;
         if (GUILayout.Button("Close"))
             doWindow9 = false;
+        GUI.skin = customSkin;
     }
 
     void CharaUpgrade(int windowID)
@@ -692,18 +721,22 @@ public class TycoonStuff : MonoBehaviour
             page = GUILayout.HorizontalSlider(page, 0, (l / 6) - 1 >= 1 ? (l / 6) - 1 : 1);
             //GUILayout.Box("Slide to change page");
         }
+        GUI.skin = closeSkin;
         if (GUILayout.Button("Close"))
         {
             page = 0;
             doWindow13 = false;
         }
+        GUI.skin = customSkin;
     }
 
     void MoneyError(int windowID)
     {
         GUILayout.Box("You don't have enough money to perform that action");
+        GUI.skin = closeSkin;
         if (GUILayout.Button("Close"))
             doWindow10 = false;
+        GUI.skin = customSkin;
     }
 
     void DisplayTeam(int windowID)
@@ -741,11 +774,13 @@ public class TycoonStuff : MonoBehaviour
             page = GUILayout.HorizontalSlider(page, 0, (l / 3) - 1);
             //GUILayout.Box("Slide to change page");
         }
+        GUI.skin = closeSkin;
         if (GUILayout.Button("Close"))
         {
             page = 0;
             doWindow11 = false;
         }
+        GUI.skin = customSkin;
     }
 
     void DisplayItems(int windowID)
@@ -771,11 +806,13 @@ public class TycoonStuff : MonoBehaviour
         }
         if ((idk != null ? idk.inventory : TeamInventory).Count == 0)
             GUILayout.Box("Much empty, very wow");
+        GUI.skin = closeSkin;
         if (GUILayout.Button("Close"))
         {
             idk = null;
             doWindow12 = false;
         }
+        GUI.skin = customSkin;
     }
 
     void ChooseTeam(int windowID)
@@ -851,6 +888,8 @@ public class TycoonStuff : MonoBehaviour
                 doWindow14 = false;
             }
         }
+
+        GUI.skin = closeSkin;
         if (GUILayout.Button("Close"))
         {
             while (fightTeam.Count > 0)
@@ -861,6 +900,7 @@ public class TycoonStuff : MonoBehaviour
             page = 0;
             doWindow14 = false;
         }
+        GUI.skin = customSkin;
     }
 
     public List<string> GetFighterNames()
