@@ -23,7 +23,7 @@ public class Character {
     private int maxLife;
     public int xp;
     public int[] xpsteps = { 2000, 40000, 800000 };
-    private float[] step;
+    public float[] step;
     public List<Items> inventory;
     protected int[] stats;
     protected int[] interstats;
@@ -34,7 +34,7 @@ public class Character {
     public int spd;
     public int salary;
 
-    public Character(Characterclass c, string name, int lvl = 0)
+    public Character(Characterclass c, string name, int lvl = 1)
     {
         inventory = new List<Items>(4);
         switch (c)
@@ -106,7 +106,15 @@ public class Character {
         for (int i = 0; i < 6; i++)
         {
             stats[i] += Random.Range(-2, 2);
-            stats[i] *= (int) Mathf.Pow(2, lvl);
+            for(int j = 1; j < lvl; j++)
+            {
+                life += (int)((step[0] + 1) * Life);
+                atk = (int)((step[1] + 1) * Atk);
+                def = (int)((step[2] + 1) * Def);
+                matk = (int)((step[3] + 1) * Matk);
+                mdef = (int)((step[4] + 1) * Mdef);
+                spd = (int)((step[5] + 1) * Spd);
+            }                
             if (stats[i] < 0)
             {
                 stats[i] = 0;
@@ -114,7 +122,7 @@ public class Character {
 
         }
         salary += Random.Range(-200, +150);
-        salary *= lvl + 1;
+        salary *= lvl;
         if (salary < 0)
             salary = 0;
         life = stats[0];
@@ -162,8 +170,7 @@ public class Character {
         get { return stats[5]; }
         set { stats[5] = value; }
     }
-
-public Characterclass Class
+    public Characterclass Class
     { get { return c; } }
 
     bool attack(Character opponent, int atk, int def)
@@ -207,36 +214,46 @@ public Characterclass Class
 
     public void lvlUp()
     {
-        life += (int)((step[0] + 1) * Life);       
-        atk = (int)((step[1] + 1) * Atk);
-        def = (int)((step[2] + 1) * Def);
-        matk = (int)((step[3] + 1) * Matk);
-        mdef = (int)((step[4] + 1) * Mdef);
-        spd = (int)((step[5] + 1) * Spd);
-        maxLife = life;
-        Life = life;
-        Atk = atk;
-        Def = def;
-        Matk = matk;
-        Mdef = mdef;
-        Spd = spd;
+        if (lvl < 3)
+        {
+            float percent = ((float)xp / (float)xpsteps[lvl - 1]) < 1 ? ((float)xp / (float)xpsteps[lvl - 1]) : 1;
+            life += (int)((step[0] + 0.5) * (int)(Life * percent * step[0] * 0.5));
+            atk = (int)((step[1] + 0.5) * (int)(Atk * percent * step[1] * 0.5));
+            def = (int)((step[2] + 0.5) * (int)(Def * percent * step[2] * 0.5));
+            matk = (int)((step[3] + 0.5) * (int)(Matk * percent * step[3] * 0.5));
+            mdef = (int)((step[4] + 0.5) * (int)(Mdef * percent * step[4] * 0.5));
+            spd = (int)((step[5] + 0.5) * (int)(Spd * percent * step[5] * 0.5));
+            maxLife = life;
+            Life = life;
+            Atk = atk;
+            Def = def;
+            Matk = matk;
+            Mdef = mdef;
+            Spd = spd;
+            lvl++;
+            salary *= 2;
+        }
     }
 
     public void updateStats()
     {
-        interstats[0] = (int)(stats[0] * (1 + xp / xpsteps[lvl] * 100 * (step[0] + 1) / 2));
-        interstats[1] = (int)(stats[1] * (1 + xp / xpsteps[lvl] * 100 * (step[1] + 1) / 2));
-        interstats[2] = (int)(stats[2] * (1 + xp / xpsteps[lvl] * 100 * (step[2] + 1) / 2));
-        interstats[3] = (int)(stats[3] * (1 + xp / xpsteps[lvl] * 100 * (step[3] + 1) / 2));
-        interstats[4] = (int)(stats[4] * (1 + xp / xpsteps[lvl] * 100 * (step[4] + 1) / 2));
-        interstats[5] = (int)(stats[5] * (1 + xp / xpsteps[lvl] * 100 * (step[5] + 1) / 2));
-        life = interstats[0];
-        maxLife = life;
-        atk = interstats[1];
-        def = interstats[2];
-        matk = interstats[3];
-        mdef = interstats[4];
-        spd = interstats[5];
+        if (lvl <= 3)
+        {
+            float percent = ((float)xp / (float)xpsteps[lvl - 1]) < 1 ? ((float)xp / (float)xpsteps[lvl - 1]) : 1;
+            interstats[0] = (int)(Life * (1 + percent * step[0] * 0.5));
+            interstats[1] = (int)(Atk * (1 + percent * step[1] * 0.5));
+            interstats[2] = (int)(Def * (1 + percent * step[2] * 0.5));
+            interstats[3] = (int)(Matk * (1 + percent * step[3] * 0.5));
+            interstats[4] = (int)(Mdef * (1 + percent * step[4] * 0.5));
+            interstats[5] = (int)(Spd * (1 + percent * step[5] * 0.5));
+            life = interstats[0];
+            maxLife = life;
+            atk = interstats[1];
+            def = interstats[2];
+            matk = interstats[3];
+            mdef = interstats[4];
+            spd = interstats[5];
+        }
     }
 
     public int Heal(int h)
