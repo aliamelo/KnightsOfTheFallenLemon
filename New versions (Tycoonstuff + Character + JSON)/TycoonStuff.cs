@@ -52,6 +52,7 @@ public class TycoonStuff : MonoBehaviour
     public bool containsCount = false;
     public bool containsSec = false;
     public bool containsStag = false;
+    private bool underAttack = false;
     private string savePath = "";
     private string trash = "";
     private Items iChoice;
@@ -131,6 +132,11 @@ public class TycoonStuff : MonoBehaviour
     {
         income = getIncome(Team);
         money += (int)income;
+        if(Random.Range(0,5) == 5)
+        {
+            underAttack = true;
+            doWindow14 = true;
+        }
     }
 
     void Hire(int windowID)
@@ -817,6 +823,8 @@ public class TycoonStuff : MonoBehaviour
 
     void ChooseTeam(int windowID)
     {
+        if (underAttack)
+            GUILayout.Box("You are under Attack!");
         GUILayout.Box("Choose up to 6 characters to send into battle.");
         int l = Team.Count;
         int t = fightTeam.Count;
@@ -882,23 +890,27 @@ public class TycoonStuff : MonoBehaviour
                 {
                     Team.Add(fightTeam[fightTeam.Count - 1]);
                     fightTeam.RemoveAt(fightTeam.Count - 1);
-                }
-                //do something to get to Lea's part
+                }               
                 page = 0;
+                underAttack = false;
                 doWindow14 = false;
+                //do something to get to Lea's part
             }
         }
 
         GUI.skin = closeSkin;
-        if (GUILayout.Button("Close"))
+        if (!underAttack)
         {
-            while (fightTeam.Count > 0)
+            if (GUILayout.Button("Close"))
             {
-                Team.Add(fightTeam[fightTeam.Count - 1]);
-                fightTeam.RemoveAt(fightTeam.Count - 1);
+                while (fightTeam.Count > 0)
+                {
+                    Team.Add(fightTeam[fightTeam.Count - 1]);
+                    fightTeam.RemoveAt(fightTeam.Count - 1);
+                }
+                page = 0;
+                doWindow14 = false;
             }
-            page = 0;
-            doWindow14 = false;
         }
         GUI.skin = customSkin;
     }

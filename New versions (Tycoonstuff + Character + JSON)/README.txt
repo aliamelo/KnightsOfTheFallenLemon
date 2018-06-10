@@ -1,2 +1,2 @@
-Attention : crÃ©er un sous dossier "Fight" dans le dossier sauvegarde
-Le fichier avec les noms va dans la racine
+Attention : créer un sous dossier "Fight" dans le dossier sauvegarde
+Le Dossier Fight Contient, l'équipe alliée (fichier Heroes), l'équipe ennemie (fichier Foes), l'argent (fichier Money) et le nom de la partie à charger quand on revient dans la partie tycoon (fichier SavePath)
